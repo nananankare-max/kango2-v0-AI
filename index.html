@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ※変更・削除はここ！ 【サイト全体のタイトル】 -->
+  <title>埼玉県済生会川口総合病院 看護師採用サイト</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ルール4：画像パスが空の場合、親コンテナごと非表示にする
+      document.querySelectorAll('.js-image-box').forEach(box => {
+        const img = box.querySelector('img');
+        if (!img || !img.getAttribute('src') || img.getAttribute('src').trim() === "") {
+          box.style.display = 'none';
+        }
+      });
+
+      // ルール3：ヘッダーボタンの文字が空の場合、ボタン枠ごと非表示にする
+      document.querySelectorAll('.js-header-btn').forEach(btn => {
+        if (btn.textContent.trim() === "") {
+          btn.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</head>
+<body class="bg-[#fcf8f2]">
+  <!-- 最外枠：PC閲覧時に中央配置を保つためのメインコンテナ -->
+  <div class="w-full max-w-[1440px] mx-auto relative bg-white shadow-lg overflow-hidden font-sans text-[#333]">
+    
+    <!-- ===== HEADER ===== -->
+    <header class="absolute top-0 left-0 w-full z-30 flex items-center justify-between px-6 lg:px-12 py-6 gap-4">
+      <!-- ロゴエリア -->
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 rounded-full bg-[#d61e21] flex items-center justify-center text-white text-xs font-bold">＋</div>
+        <div class="text-white leading-tight">
+          <p class="text-[9px] opacity-90 tracking-wider">社会福祉法人 恩賜財団</p>
+          <p class="font-bold text-xs lg:text-sm tracking-wide">埼玉県済生会川口総合病院</p>
+          <span class="mt-1 inline-block bg-white/95 text-[#a87440] text-[9px] px-3 py-0.5 rounded-full font-bold">看護部採用サイト</span>
+        </div>
+      </div>
+
+      <!-- 中央：ナビゲーションボタン（仮のメニュー1、仮のメニュー2） -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-white/90 ml-auto mr-6">
+        <!-- ※変更・削除はここ！ 【ヘッダーボタン：仮のメニュー1】（文字を空""にすると枠ごと消えます） -->
+        <a href="#" class="js-header-btn hover:text-white/70 transition-colors py-2 px-3 font-semibold">仮のメニュー1</a>
+        
+        <!-- ※変更・削除はここ！ 【ヘッダーボタン：仮のメニュー2】（文字を空""にすると枠ごと消えます） -->
+        <a href="#" class="js-header-btn hover:text-white/70 transition-colors py-2 px-3 font-semibold">仮のメニュー2</a>
+      </nav>
+
+      <!-- 右側：アクションボタン（募集要項、お問い合わせ） -->
+      <div class="flex gap-2 shrink-0 z-10">
+        <!-- ※変更・削除はここ！ 【ヘッダーボタン：募集要項一覧】（文字を空""にすると枠ごと消えます） -->
+        <a href="#" class="js-header-btn bg-[#e49b5d] hover:bg-[#d98b4a] transition-colors text-white text-xs lg:text-sm px-4 lg:px-6 py-3 lg:py-4 leading-tight text-center font-bold flex items-center justify-center min-w-[100px] lg:min-w-[120px] rounded-md shadow-md">募集要項一覧</a>
+        
+        <!-- ※変更・削除はここ！ 【ヘッダーボタン：病院見学・お問い合わせ】（文字を空""にすると枠ごと消えます） -->
+        <a href="#" class="js-header-btn bg-[#1e2a38] hover:bg-[#2c3d52] transition-colors text-white text-xs lg:text-sm px-4 lg:px-6 py-3 lg:py-4 leading-tight text-center font-bold flex items-center justify-center min-w-[150px] lg:min-w-[180px] rounded-md shadow-md">病院見学・お問い合わせ</a>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="relative h-[720px] lg:h-[860px] overflow-hidden bg-gradient-to-br from-[#f8ece0] via-[#f9dfc5] to-[#f4cca2] flex items-center">
+      <!-- 左側テキスト：英文タイトルやキャッチコピー -->
+      <div class="absolute top-40 lg:top-44 left-6 lg:left-12 z-20 select-none pointer-events-none leading-[0.9] text-white font-extrabold tracking-tight max-w-[50%] lg:max-w-[550px] xl:max-w-[620px]">
+        <!-- ※変更・削除はここ！ 【ヒーロー大文字テキスト】 -->
+        <h1 class="text-[55px] md:text-[68px] lg:text-[84px] xl:text-[90px] drop-shadow-sm">SAISEIKAI</h1>
+        <h1 class="text-[55px] md:text-[68px] lg:text-[84px] xl:text-[90px] drop-shadow-sm">KAWAGUCHI</h1>
+        <p class="text-[18px] md:text-[22px] lg:text-[26px] tracking-[0.3em] font-light my-3 text-white">GENERAL HOSPITAL</p>
+        <h1 class="text-[75px] md:text-[90px] lg:text-[115px] xl:text-[120px] drop-shadow-sm">NURSE</h1>
+        <!-- ※変更・削除はここ！ 【日本語メインコピー】 -->
+        <p class="text-[#5a4a3a] text-sm md:text-base lg:text-lg tracking-[0.4em] mt-6 font-semibold opacity-90">地域に寄り添うやさしい看護</p>
+      </div>
+
+      <!-- ★★★ 【写真の入れ替え・削除はこちら】 ヒーロー：メイン画像（正方形に近いサイズ） ★★★ -->
+      <!-- ※変更・削除はここ！ 【ヒーロー画像：パスを空 src="" にすると枠ごと消えます】 -->
+      <div class="js-image-box absolute top-32 right-6 lg:right-12 xl:right-16 w-[360px] h-[360px] md:w-[460px] md:h-[460px] lg:w-[520px] lg:h-[520px] xl:w-[560px] xl:h-[560px] rounded-[45%_55%_60%_40%_/_45%_45%_55%_55%] overflow-hidden shadow-xl z-10 bg-white">
+        <img src="img/hero.jpg" alt="看護師" class="w-full h-full object-cover object-[center_35%] scale-[1.15]" />
+      </div>
+
+      <!-- スクロール誘導 -->
+      <div class="absolute bottom-16 lg:bottom-24 left-6 lg:left-12 z-20 w-20 h-20 lg:w-24 lg:h-24 rounded-full border border-[#8a6a4a]/40 flex flex-col items-center justify-center text-[9px] tracking-widest text-[#8a6a4a] rotate-[-12deg]">
+        <span class="opacity-80">SCROLL</span>
+        <span class="text-[12px] mt-0.5">↓</span>
+      </div>
+    </section>
+
+    <!-- ===== MESSAGE ===== -->
+    <section class="relative bg-gradient-to-b from-[#f4cca2] via-[#f7dcc0] to-[#f9e5ce] py-32 lg:py-40 overflow-hidden">
+      
+      <!-- 周辺の浮遊写真（8枚に増量・約1.5倍に拡大したダイナミック配置） -->
+      <div class="absolute inset-0 pointer-events-none z-0">
+        
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真1：左上（縦長、最奥） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真1：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute top-[4%] left-[2%] lg:left-[4%] w-[130px] h-[180px] lg:w-[170px] lg:h-[235px] xl:w-[195px] xl:h-[270px] rounded-2xl overflow-hidden shadow-md z-0 opacity-80 rotate-[-6deg]">
+          <img src="img/tate.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真2：左上寄り中段（横長、手前） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真2：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute top-[22%] left-[5%] lg:left-[8%] xl:left-[10%] w-[170px] h-[115px] lg:w-[220px] lg:h-[150px] xl:w-[255px] xl:h-[172px] rounded-2xl overflow-hidden shadow-xl z-20 rotate-[4deg]">
+          <img src="img/yoko.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真3：左下（縦長、奥） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真3：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute bottom-[10%] left-[3%] lg:left-[5%] w-[120px] h-[165px] lg:w-[160px] lg:h-[220px] xl:w-[185px] xl:h-[255px] rounded-2xl overflow-hidden shadow-md z-0 opacity-85 rotate-[-3deg]">
+          <img src="img/tate.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真4：左下寄り（横長、手前・新規追加） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真4：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute bottom-[2%] left-[10%] lg:left-[14%] xl:left-[16%] w-[160px] h-[108px] lg:w-[210px] lg:h-[142px] xl:w-[240px] xl:h-[162px] rounded-2xl overflow-hidden shadow-xl z-20 rotate-[8deg]">
+          <img src="img/yoko.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真5：右上奥（縦長、奥・新規追加） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真5：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute top-[3%] right-[8%] lg:right-[13%] xl:right-[15%] w-[120px] h-[165px] lg:w-[155px] lg:h-[215px] xl:w-[180px] xl:h-[250px] rounded-2xl overflow-hidden shadow-md z-0 opacity-80 rotate-[5deg]">
+          <img src="img/tate.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真6：右上（横長、手前） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真6：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute top-[20%] right-[2%] lg:right-[5%] xl:right-[7%] w-[160px] h-[108px] lg:w-[210px] lg:h-[142px] xl:w-[240px] xl:h-[162px] rounded-2xl overflow-hidden shadow-xl z-20 rotate-[-4deg]">
+          <img src="img/yoko.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真7：右中段（縦長、奥・新規追加） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真7：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute top-[50%] right-[1%] lg:right-[2%] xl:right-[3%] w-[110px] h-[150px] lg:w-[145px] lg:h-[200px] xl:w-[170px] xl:h-[235px] rounded-2xl overflow-hidden shadow-md z-0 opacity-85 rotate-[3deg]">
+          <img src="img/tate.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- ★★★ 【写真の入れ替え・削除はこちら】 浮遊写真8：右下（横長、中段） ★★★ -->
+        <!-- ※変更・削除はここ！ 【浮遊写真8：パスを空 src="" にすると枠ごと消えます】 -->
+        <div class="js-image-box absolute bottom-[6%] right-[4%] lg:right-[8%] xl:right-[10%] w-[180px] h-[120px] lg:w-[230px] lg:h-[155px] xl:w-[270px] xl:h-[182px] rounded-2xl overflow-hidden shadow-lg z-10 rotate-[-5deg]">
+          <img src="img/yoko.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+
+      </div>
+
+      <!-- 中央：メッセージカード -->
+      <div class="relative z-10 mx-auto w-[90%] max-w-[580px] bg-white rounded-[40px] px-8 lg:px-16 py-16 lg:py-20 shadow-xl text-center">
+        <!-- ※変更・削除はここ！ 【セクション英語サブタイトル】 -->
+        <p class="text-[#e49b5d] tracking-[0.4em] text-[11px] lg:text-xs font-bold mb-6">MESSAGE</p>
+        <!-- ※変更・削除はここ！ 【メッセージセクション・大見出し】 -->
+        <h2 class="text-xl lg:text-2xl font-bold leading-relaxed mb-8 text-[#2b2b2b]">
+          あなたの笑顔が、<br/>
+          患者さんの力になる
+        </h2>
+        <!-- ※変更・削除はここ！ 【メッセージ本文】 -->
+        <div class="space-y-6 text-xs lg:text-[13px] leading-relaxed text-[#555] font-medium">
+          <p>
+            私たちは、済生会の使命のもと、地域の患者さんを支えています。<br/>
+            どれだけ医療が進歩しても、看護において変わらない大切なこと。<br/>
+            それは、対話を通じて心を通わせ、安心できる環境をつくることです。
+          </p>
+          <p>
+            看護師の温かい言葉や笑顔、<br/>
+            そして、あなたがあなたらしく働き、心身ともに健やかでいること。<br/>
+            それが、患者さんの元気につながります。
+          </p>
+          <p class="pt-2 font-bold text-[#333]">一緒に、その喜びを感じませんか。</p>
+        </div>
+        
+        <!-- ※変更・削除はここ！ 【リンクボタン】 -->
+        <div class="mt-10 inline-flex items-center gap-3 border-b border-[#333] pb-1.5 hover:opacity-70 transition-opacity cursor-pointer">
+          <span class="text-xs lg:text-sm font-bold text-[#333]">看護部について</span>
+          <span class="w-5 h-5 rounded-full border border-[#333] flex items-center justify-center text-[10px]">→</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURE ===== -->
+    <section class="relative bg-[#26313f] py-24 lg:py-28 overflow-hidden">
+      <div class="relative flex px-6 lg:px-16 gap-8 lg:gap-14 z-10">
+        <!-- 左側：縦書きタイトル -->
+        <div class="flex flex-col items-center pt-2 shrink-0">
+          <!-- ※変更・削除はここ！ 【縦書き日本語キャッチ】 -->
+          <p class="text-white/80 text-[10px] tracking-[0.45em] [writing-mode:vertical-rl] mb-6 font-semibold">看護部の特徴</p>
+          <!-- ※変更・削除はここ！ 【縦書き英語タイトル（フォントサイズ等含む）】 -->
+          <h2 class="text-white font-black text-[56px] lg:text-[76px] leading-none tracking-tighter [writing-mode:vertical-rl]">FEATURE</h2>
+        </div>
+
+        <!-- 右側：特徴紹介グリッドエリア -->
+        <div class="flex-1 grid grid-cols-2 gap-6 lg:gap-10 pt-2">
+          
+          <!-- ★★★ 【写真の入れ替え・削除はこちら】 特徴01カード（横長画像） ★★★ -->
+          <!-- ※変更・削除はここ！ 【特徴1：パスを空 src="" にするとカード枠ごと消えます】 -->
+          <div class="js-image-box relative flex flex-col justify-between">
+            <div>
+              <span class="block text-[#e49b5d] text-4xl lg:text-5xl font-extrabold mb-2">01</span>
+              <div class="w-full h-44 lg:h-56 overflow-hidden rounded-2xl shadow-md bg-gray-800">
+                <img src="img/yoko.jpg" alt="特徴1" class="w-full h-full object-cover object-[center_10%]" />
+              </div>
+              <!-- ※変更・削除はここ！ 【特徴1のタイトルテキスト】 -->
+              <p class="text-white text-xs lg:text-sm mt-4 leading-relaxed font-semibold">
+                川口・戸田・蕨エリアの中核となる<br/>
+                急性期病院で、地域医療に貢献できる
+              </p>
+            </div>
+            <div class="mt-4 flex justify-end">
+              <span class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center text-white text-xs hover:bg-white/10 transition-colors cursor-pointer">→</span>
+            </div>
+          </div>
+
+          <!-- ★★★ 【写真の入れ替え・削除はこちら】 特徴02カード（横長画像） ★★★ -->
+          <!-- ※変更・削除はここ！ 【特徴2：パスを空 src="" にするとカード枠ごと消えます】 -->
+          <div class="js-image-box relative flex flex-col justify-between">
+            <div>
+              <span class="block text-[#e49b5d] text-4xl lg:text-5xl font-extrabold mb-2">02</span>
+              <div class="w-full h-44 lg:h-56 overflow-hidden rounded-2xl shadow-md bg-gray-800">
+                <img src="img/yoko.jpg" alt="特徴2" class="w-full h-full object-cover object-center" />
+              </div>
+              <!-- ※変更・削除はここ！ 【特徴2のタイトルテキスト】 -->
+              <p class="text-white text-xs lg:text-sm mt-4 leading-relaxed font-semibold">
+                新人看護師を育成する<br/>
+                充実のサポート体制
+              </p>
+            </div>
+            <div class="mt-4 flex justify-end">
+              <span class="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center text-white text-xs hover:bg-white/10 transition-colors cursor-pointer">→</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- スライダー矢印とボタン -->
+      <div class="flex flex-col items-center mt-16 gap-5">
+        <div class="flex items-center gap-3 text-white/50 text-xs font-mono">
+          <span class="cursor-pointer hover:text-white">←</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/30"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/30"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-white/30"></span>
+          <span class="cursor-pointer hover:text-white">→</span>
+        </div>
+        <!-- ※変更・削除はここ！ 【詳しく見るボタン】 -->
+        <div class="inline-flex items-center gap-3 text-white border-b border-white/50 pb-1 hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-xs lg:text-sm font-semibold">詳しく見る</span>
+          <span class="w-5 h-5 rounded-full border border-white/50 flex items-center justify-center text-[9px]">→</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
